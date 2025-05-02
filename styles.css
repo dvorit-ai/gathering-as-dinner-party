@@ -1,0 +1,54 @@
+* {
+    font-family:"GT-Alpina", monospace;
+    text-transform: uppercase;
+}
+
+body{
+    margin:0;
+    padding:15px 25px;
+    background-color: #f0f0f0;
+    width:calc(100vw - 50px);
+}
+
+@font-face {
+    font-family: "GT-Alpina";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/GT-Alpina-Typewriter-Regular-Trial.woff2) format("woff2");
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background:pink;
+}
+
+header p, a{
+    font-size:14px;
+}
+
+a {
+    text-decoration:none;
+    color:black;
+}
+
+.primary-button{
+    padding:5px;
+    border:1px solid black;
+    border-radius:5px;
+    width:fit-content;
+    background:white;
+}
+
+.primary-button:hover{
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: space-between;
+    background:lightblue;
+    width:50%;
+}
