@@ -24,6 +24,7 @@
 :root {
     --font-size: 14px;
     --off-white: #f0f0f0;
+    --green: #B8E05D;
 }
 
 html {
@@ -61,17 +62,21 @@ a {
 }
 
 .primary-button{
-    padding:5px;
+    margin:0 0 15px 0;
+    padding: 10px 20px;
     border:1px solid black;
     border-radius:5px;
-    width:fit-content;
     background:white;
-    z-index:999999999999;
 }
 
 .primary-button:hover{
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.3);
     text-decoration: none;
+}
+
+header .primary-button{
+    z-index:999999999999;
+    width:fit-content;
 }
 
 .secondary-button:hover{
@@ -84,11 +89,12 @@ a {
 
 #info{
     width:50%;
+    padding-left:20px;
 }
 
 nav {
     margin:0;
-    padding:0;
+    padding:10px 0;
     display:flex;
     /* column-gap:20px;
     text-align:right; */
@@ -282,6 +288,7 @@ section{
     margin:auto;
     text-align:center;
     padding-bottom:100px;
+    height:50vh;
 }
 
 /* VIDEO */
@@ -391,123 +398,68 @@ iframe{
 
 /* ZINE SECTION */
 
-/* #zine-container{
-    position: relative;
-    height:calc(100vh - 50px);
-    background:black;
-    border-radius:15px;
-}
-
-#zine-container img{
-    width:300px;
-    height:auto;
-    position:absolute;
-    border-radius:15px;
-}
-
-.zine-img{
-    position:absolute;
-    transition: transform 0.5s ease;
-}
-
-.zine-img:hover{
-    transform: translateY(-20px) translateX(-20px) scale(1.1);
-    z-index: 100 !important;
-}
-
-#zine-1{
-    top:27%;
-    left:5%;
-}
-
-#zine-2{
-    top:8%;
-    left:20%;
-}
-
-#zine-3{
-    top:6%;
-    left:50%;
-}
-
-#zine-4{
-    top:15%;
-    right:calc(5% + 300px);
-}
-
-#zine-5{
-    top:60%;
-    right:calc(10% + 300px);
-}
-
-#zine-6{
-    top:45%;
-    left:37%;
-}
-
-#zine-7{
-    top:63%;
-    left:20%;
-} */
-
-/* TESTING DRAGGABLE IMAGES */
-
 #zine-container{
     position: relative;
-    height:calc(100vh - 50px);
+    height:175vh;
+    width: 100vw;
+    left:-25px;
     background:black;
-    border-radius:15px;
+    /* background-image: url("images/AdobeStock_309233067-whiter.jpeg");
+    background-size: cover; */
 }
 
 #zine-container img{
-    width:300px;
+    width:450px;
     height:auto;
-    border-radius:15px;
+    border-radius:25px;
+    filter: drop-shadow(-2px 3px 5px rgba(0, 0, 0, 0.3));
 }
 
 .zine-img{
     position:absolute;
     cursor: move; 
-    user-select: none; 
+    user-select: none;
+    transition: transform 0.2s ease; 
 }
 
 .zine-img:hover{
     z-index:100;
+    transform: translateY(-5px) translateX(-5px) scale(1.1);
 }
 
 #zine-1{
-    top:27%;
-    left:5%;
+    top:30rem;
+    left:5rem;
 }
 
 #zine-2{
-    top:8%;
-    left:20%;
+    top:15rem;
+    left:20rem;
 }
 
 #zine-3{
-    top:6%;
-    left:48%;
+    top:10rem;
+    left:40rem;
 }
 
 #zine-4{
-    top:15%;
-    right:5%;
+    top:20rem;
+    right:5rem;
 }
 
 #zine-5{
-    top:60%;
-    right:10%;
+    top:55rem;
+    right:10rem;
 }
 
 #zine-6{
-    top:45%;
-    left:37%;
+    top:45rem;
+    left:45rem;
 }
 
 #zine-7{
-    top:63%;
-    left:20%;
+    top:57rem;
+    left:13rem;
 }
 
 /* DISCUSSION SECTION */
@@ -517,37 +469,27 @@ iframe{
     width: 100%;
     height: fit-content;
     margin: 0 auto;
-    border:1px solid black;
-    border-radius:15px;
     display:flex;
     justify-content: space-between;
-    background:white;
+    column-gap:20px;
 }
 
 #questions-nav{
     flex: 1;
-    padding: 10px 20px;
-    color:rgba(0, 0, 0, 0.2);
-    background:#B8E05D;
-    border-right:1px solid rgb(26, 26, 26);
-    border-radius: 15px 0 0 15px;
+    padding: 0;
+    color:rgba(0, 0, 0, 0.3)
 }
 
 #questions-nav .active{
     color:black;
-}
-
-#questions-nav .active:hover{
-    color:black;
-}
-
-#questions-nav p:hover{
-    text-decoration:underline;
-    color:rgba(0, 0, 0, 0.4);
+    background:var(--green);
 }
 
 #answers-img{
     flex: 5;
+    border:1px solid black;
+    border-radius:15px;
+    background:white;
 }
 
 #discussion-container img{
@@ -583,6 +525,5 @@ footer{
     position:absolute;
     width:calc(100vw - 50px);
     height:100%;
-    z-index:-5;
-    mix-blend-mode: multiply;
+    z-index:-1;
 }
